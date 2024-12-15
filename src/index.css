@@ -81,7 +81,7 @@ body {
 }
 
 .bg {
-  background-image: url(./bg.jpg);
+  background-image: url(../public/bg.jpg);
   background-position: center;
   background-size: cover;
 }
