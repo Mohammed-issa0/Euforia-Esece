@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --luxury-light: #9d84b7;
+  --luxury: #5b3e8a;
+  --luxury-dark: #2d1f44;
+}
+
+html {
+  direction: rtl;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  font-family: "Tajawal", sans-serif;
+}
+
+/* Custom Slider Dots */
+.slick-dots {
+  bottom: -40px !important;
+  position: relative !important;
+  margin-top: 2rem !important;
+}
+
+.slick-dots li {
+  margin: 0 4px !important;
+  border-radius: 50%;
+}
+
+.slick-dots li button:before {
+  background: var(--luxury);
+}
+
+.slick-dots li button {
+  width: 12px !important;
+  height: 12px !important;
+  padding: 0 !important;
+  border-radius: 50%;
+}
+
+.slick-dots li.slick-active button {
+  background-color: var(--luxury) !important;
+  text: center;
+}
+
+/* Testimonials Slider */
+.slick-slide {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slick-slide.slick-active {
+  opacity: 1;
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold text-center mb-12 text-luxury-light;
+  }
+
+  .spec-card {
+    @apply bg-black/80 rounded-lg p-6 border-2 border-luxury/30 backdrop-blur-sm
+    hover:border-luxury/60 transition-all duration-300 transform hover:-translate-y-1;
+  }
+}
+
+.text-shadow-luxury {
+  text-shadow: 0 0 10px var(--luxury-light);
+}
+
+.bg {
+  background-image: url(./bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
